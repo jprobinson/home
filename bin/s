@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# The `s` quick ssh plus screen script
+
+# The script will ssh to a numbered paperboy dev server as indicated by:
+# $1 (the subserver name, e.g., msg for paperboy-msg, defaults to ci)
+# $2 (the number of the server, e.g., 2 for paperboy-msg02 default to 1)
+# $3 (the env, defaults to dev)
+
+if [ -z "$1" ]; then
+    subserver=ci
+else
+    subserver=$1
+fi
+
+if [ -z "$2" ]; then
+    num="01"
+else
+    num=`printf '%02d' $2`
+fi
+
+
+if [ -z "$3" ]; then
+    env='dev.ewr1'
+else 
+    env=$3
+fi
+
+# Use screen on dev, but don't pollute other envs with potentially abandoned
+# screen sessions.
+if [ "$env" == "dev.ewr1" ]; then 
+    ssh -t john.robinson@paperboy-$subserver$num.$env.nytimes.com "screen -URR"
+else 
+    ssh john.robinson@paperboy-$subserver$num.$env.nytimes.com 
+fi

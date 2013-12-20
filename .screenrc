@@ -1,0 +1,5 @@
+termcapinfo xterm ti@:te@
+escape ^jj
+
+shell $HOME/bin/zsh
+
