@@ -54,6 +54,8 @@ export GOPATH=/home/john.robinson/svn/email-platform/go/trunk
 export PATH="$HOME/bin:$GOPATH/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/nyt/bin:/opt/nyt/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+alias linode='ssh -R 52698:localhost:52698 -t root@li682-103.members.linode.com "screen -URR"'
+
 # # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
