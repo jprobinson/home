@@ -29,7 +29,7 @@ fi
 # Use screen on dev, but don't pollute other envs with potentially abandoned
 # screen sessions.
 if [ "$env" == "dev.ewr1" ]; then 
-    ssh -t john.robinson@paperboy-$subserver$num.$env.nytimes.com "screen -URR"
+    ssh  -R 52698:localhost:52698 -t john.robinson@paperboy-$subserver$num.$env.nytimes.com "screen -URR"
 else 
     ssh john.robinson@paperboy-$subserver$num.$env.nytimes.com 
 fi
