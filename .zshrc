@@ -50,25 +50,16 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export GOPATH=/home/john.robinson/svn/email-platform/go/trunk
+export GOPATH="$HOME/go"
 export PATH="$HOME/bin:$GOPATH/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/nyt/bin:/opt/nyt/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH"
+export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 alias linode='ssh -R 52698:localhost:52698 -t root@li682-103.members.linode.com "screen -URR"'
 
-# # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='mvim'
- fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-
+# Preferred editor for local and remote sessions
+export EDITOR='vim'
+# json pretty print
 alias pp='python2.6 -mjson.tool'
 
