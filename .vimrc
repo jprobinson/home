@@ -1,11 +1,14 @@
 execute pathogen#infect()
 
+set t_ti= t_te= 
+set vb t_vb=
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set showmatch
 set autoindent
+set mouse=a
 set pastetoggle=<F5>
 set smartindent
 set ignorecase
@@ -14,8 +17,19 @@ set backspace=indent,eol,start
 set ruler
 set encoding=utf8
 
-" NERDTree
-map <silent> <C-n> :NERDTreeFocus<CR>
+filetype plugin indent on
+
+
+" Go
+let g:go_bin_path = expand("~/go/bin")
+let go_auto_type_info = 0
+
+set t_ku=OA
+set t_kd=OB
+set t_kr=OC
+set t_kl=OD
+
+syntax on
 
 " Front end codes
 " Javascript
@@ -24,9 +38,3 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
-" Go stuff
-let g:go_bin_path = expand("~/go/bin")
-filetype plugin indent on
-
-syntax on
