@@ -40,7 +40,9 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want to  shown in the command execution time stamp 
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
+HISTSIZE=100000
+HISTCONTROL=erasedups
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -51,15 +53,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export GOPATH="$HOME/go"
-export PATH="$HOME/bin:$GOPATH/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/nyt/bin:/opt/nyt/sbin"
-export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH"
-export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 
-alias linode='ssh -R 52698:localhost:52698 -t root@li682-103.members.linode.com "screen -URR"'
+alias GO='cd $GOPATH/src/github.com/nytm'
+alias gitemall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+alias linode='ssh -t jp@li682-103.members.linode.com "screen -URR"'
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
+
 # json pretty print
 alias pp='python2.6 -mjson.tool'
 

@@ -22,7 +22,9 @@ filetype plugin indent on
 
 " Go
 let g:go_bin_path = expand("~/go/bin")
-let go_auto_type_info = 0
+" let g:go_auto_type_info = 0
+let g:go_fmt_command = "goimports"
+let g:go_autodetect_gopath = 0
 
 set t_ku=OA
 set t_kd=OB
