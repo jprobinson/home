@@ -26,6 +26,9 @@ let g:go_bin_path = expand("~/go/bin")
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 0
 
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 set t_ku=OA
 set t_kd=OB
 set t_kr=OC
