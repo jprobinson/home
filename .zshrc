@@ -57,6 +57,7 @@ export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 
 alias GO='cd $GOPATH/src/github.com/nytm'
 alias gitemall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+# LINUX - alias gitemall='find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 alias linode='ssh -t jp@li682-103.members.linode.com "screen -URR"'
 
 # Preferred editor for local and remote sessions
