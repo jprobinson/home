@@ -19,6 +19,15 @@ set encoding=utf8
 
 filetype plugin indent on
 
+" airline
+set laststatus=2
+set t_Co=256
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='dark'
+
+" NERDTree
+let NERDTreeShowHidden=1
 
 " Go
 let g:go_bin_path = expand("~/go/bin")
