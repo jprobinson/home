@@ -66,3 +66,7 @@ export EDITOR='vim'
 # json pretty print
 alias pp='python2.6 -mjson.tool'
 
+export ANDROID_HOME=~/Library/Android/sdk/
+
+alias vim="nvim"
+alias v="nvim"
