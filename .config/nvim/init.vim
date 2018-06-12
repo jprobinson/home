@@ -45,6 +45,6 @@ let &colorcolumn=join(range(91,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = '/Users/204237/go/bin/gocode'
+let g:deoplete#sources#go#gocode_binary = '/Users/jp/go/bin/gocode'
 let g:deoplete#sources#go#use_cache = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
