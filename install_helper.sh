@@ -14,3 +14,13 @@ sh -c "$(curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plu
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)"
 
 /usr/bin/nvim +PlugInstall +qall
+
+# bring in the dot files
+mv ~/.config ~/.config.bak
+mv ~/home/.config ~/.config
+
+mv ~/.zshrc ~/.zshrc.bak
+mv ~/home/.zshrc ~/.zshrc
+
+mv ~/.gitconfig ~/.gitconfig.bak
+mv ~/home/.gitconfig ~/.gitconfig
