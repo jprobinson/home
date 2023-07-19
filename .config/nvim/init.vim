@@ -52,3 +52,4 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#use_cache = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:python3_host_prog = '/usr/local/python3/bin/python'
