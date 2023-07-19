@@ -4,7 +4,7 @@ set -x
 
 # install neovim
 sudo apt-get update && sudo apt-get -q -y upgrade
-sudo apt-get -q -y install tmux htop curl neovim python3-neovim
+sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv
 
 pip3 install neovim
 
