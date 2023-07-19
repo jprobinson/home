@@ -2,24 +2,24 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sebdah/vim-delve'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'prettier/vim-prettier', { 
 	\ 'do': 'yarn install', 
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
-
+Plug 'Shougo/deoplete.nvim'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 filetype on
 filetype indent on
-set noexpandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set mouse=a
 set ruler
+
+let NERDTreeShowHidden=1
 
 set laststatus=2
 set t_Co=256
@@ -40,14 +40,15 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+let g:go_info_mode = 'gopls'
 
-" visual reminder to keeps lines <=80 chars
+" visual reminder to keeps lines <=90 chars
 colorscheme ron
 let &colorcolumn=join(range(91,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " autocompletion settings for Shougo/deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = '/Users/jp/go/bin/gocode'
 let g:deoplete#sources#go#use_cache = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
