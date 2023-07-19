@@ -4,7 +4,7 @@ set -x
 
 # install neovim
 sudo apt-get update && sudo apt-get -q -y upgrade
-sudo apt-get install tmux htop curl neovim python3-neovim
+sudo apt-get -q -y install tmux htop curl neovim python3-neovim
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
