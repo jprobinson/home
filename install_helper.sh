@@ -15,9 +15,9 @@ sh -c "$(curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plu
 
 # bring in the dot files
 echo "copying dot files"
-cp -R ~/home/.config/nvim ~/.config/nvim
+cp -R ~/dotfiles/.config/nvim ~/.config/nvim
 
-cp ~/home/.zshrc ~/.zshrc
+cp ~/dotfiles/.zshrc ~/.zshrc
 
 echo "initiating nvim"
 
@@ -30,3 +30,5 @@ git config --global user.email jp.robinson@datadoghq.com
 git config --global pull.rebase true
 
 source ~/.zshrc
+
+sudo ddtool docker install-helper
