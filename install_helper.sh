@@ -22,7 +22,7 @@ echo "initiating nvim"
 
 nvim +PlugInstall +qall
 
-# nvim +UpdateRemotePlugins +q
+nvim +UpdateRemotePlugins +q
 
 echo "installing gocode for vim-go"
 
@@ -35,6 +35,6 @@ git config --global user.email jp.robinson@datadoghq.com
 git config --global pull.rebase true
 
 # install oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
 sudo ddtool docker install-helper
