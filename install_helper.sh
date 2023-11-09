@@ -30,6 +30,8 @@ nvim +PlugInstall +qall
 
 nvim +UpdateRemotePlugins +q
 
+sleep 1
+
 nvim +GoInstallBinaries +q
 
 echo "installing gocode for vim-go"
