@@ -22,7 +22,7 @@ echo "initiating nvim"
 
 nvim +PlugInstall +qall
 
-nvim +UpdateRemotePlugins
+nvim +UpdateRemotePlugins +q
 
 echo "installing gocode for vim-go"
 
@@ -33,8 +33,6 @@ echo "configuring git"
 git config --global user.name JP Robinson
 git config --global user.email jp.robinson@datadoghq.com
 git config --global pull.rebase true
-
-source ~/.zshrc
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
