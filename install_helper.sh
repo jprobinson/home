@@ -10,7 +10,7 @@ pip3 install neovim
 
 echo "installing oh-my-zsh"
 # force to https for the install, ssh isnt setup at this point
-git config --global url."https://github".insteadOf git://github
+git config --global --unset-all url."git@github.com:".insteadOf
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 # reset the git insteadOf settings for Go
 git config --global url."git@github.com:".insteadOf "https://github.com/"
