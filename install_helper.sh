@@ -42,5 +42,10 @@ echo "installing gocode for vim-go"
 
 go install github.com/nsf/gocode@latest
 
+echo "installing crane"
+
+go install github.com/google/go-containerregistry/cmd/crane@latest
+
+echo "docker helper"
 
 sudo ddtool docker install-helper
