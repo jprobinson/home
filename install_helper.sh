@@ -24,6 +24,8 @@ nvim +PlugInstall +qall
 
 nvim +UpdateRemotePlugins +q
 
+nvim +GoInstallBinaries +q
+
 echo "installing gocode for vim-go"
 
 go install github.com/nsf/gocode@latest
