@@ -13,7 +13,7 @@ echo "installing oh-my-zsh"
 git config --global --unset-all url."git@github.com:".insteadOf
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 # reset the git insteadOf settings for Go
-git config --global url."git@github.com:".insteadOf "https://github.com/"
+git config --global url."git@github.com:DataDog".insteadOf "https://github.com/DataDog"
 
 echo "installing vim-plug"
 sh -c "$(curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -24,13 +24,17 @@ cp -R ~/dotfiles/.config/nvim ~/.config/nvim
 
 cp ~/dotfiles/.zshrc ~/.zshrc
 
+echo "configuring git"
+
+git config --global user.name JP Robinson
+git config --global user.email jp.robinson@datadoghq.com
+git config --global pull.rebase true
+
 echo "initiating nvim"
 
 nvim +PlugInstall +qall
 
 nvim +UpdateRemotePlugins +q
-
-sleep 1
 
 nvim +GoInstallBinaries +q
 
@@ -38,10 +42,5 @@ echo "installing gocode for vim-go"
 
 go install github.com/nsf/gocode@latest
 
-echo "configuring git"
-
-git config --global user.name JP Robinson
-git config --global user.email jp.robinson@datadoghq.com
-git config --global pull.rebase true
 
 sudo ddtool docker install-helper
