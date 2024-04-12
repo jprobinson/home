@@ -30,13 +30,11 @@ git config --global user.name JP Robinson
 git config --global user.email jp.robinson@datadoghq.com
 git config --global pull.rebase true
 
+source ~/.zshrc
+
 echo "initiating nvim"
 
-nvim +PlugInstall +qall
-
-nvim +UpdateRemotePlugins +q
-
-nvim +GoInstallBinaries +q
+nvim +PlugInstall +qall +UpdateRemotePlugins
 
 echo "installing gocode for vim-go"
 
