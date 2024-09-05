@@ -4,7 +4,7 @@ set -x
 
 # install neovim
 sudo apt-get update && sudo apt-get -q -y upgrade
-sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv
+sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv coreutils moreutils
 
 pip3 install neovim
 
@@ -44,12 +44,6 @@ sudo ddtool docker install-helper
 
 echo "ruby stuff"
 
-sudo gem install bundler
+sudo gem install bundler -v 2.4.22
 sudo gem install inifile
-sudo gem install rake-13.0.3
-
-echo "random tools"
-
-sudo apt install coreutils
-sudo apt install moreutils
-sudo apt install ts
+sudo gem install rake
