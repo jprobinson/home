@@ -47,3 +47,15 @@ go install github.com/google/go-containerregistry/cmd/crane@latest
 echo "docker helper"
 
 sudo ddtool docker install-helper
+
+echo "ruby stuff"
+
+sudo gem install bundler
+sudo gem install inifile
+sudo gem install rake-13.0.3
+
+echo "random tools"
+
+sudo apt install coreutils
+sudo apt install moreutils
+sudo apt install ts
