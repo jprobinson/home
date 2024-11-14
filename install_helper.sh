@@ -4,7 +4,7 @@ set -x
 
 # install neovim
 sudo apt-get update && sudo apt-get -q -y upgrade
-sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv coreutils moreutils
+sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv
 
 pip3 install neovim
 
@@ -41,9 +41,3 @@ go install github.com/google/go-containerregistry/cmd/crane@latest
 echo "docker helper"
 
 sudo ddtool docker install-helper
-
-echo "ruby stuff"
-
-sudo gem install bundler -v 2.4.22
-sudo gem install inifile
-sudo gem install rake
