@@ -4,7 +4,7 @@ set -x
 
 # install neovim
 sudo apt-get update && sudo apt-get -q -y upgrade
-sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv
+sudo apt-get -q -y install tmux htop curl neovim python3-neovim direnv silversearcher-ag
 
 pip3 install neovim
 
@@ -25,14 +25,6 @@ echo "configuring git"
 git config --global user.name JP Robinson
 git config --global user.email jp.robinson@datadoghq.com
 git config --global pull.rebase true
-
-echo "initiating nvim"
-
-nvim +PlugInstall +qall +UpdateRemotePlugins
-
-echo "installing gocode for vim-go"
-
-go install github.com/nsf/gocode@latest
 
 echo "installing crane"
 
