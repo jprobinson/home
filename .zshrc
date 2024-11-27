@@ -76,9 +76,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export GOPATH="$HOME/go"
-export GO111MODULE=on
-export GOPROXY=binaries.ddbuild.io,https://proxy.golang.org
-export GOPRIVATE=github.com/DataDog,github.com/docker/docker
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 # override default openssl
@@ -95,9 +92,6 @@ alias dbash='docker run -it --entrypoint /bin/bash'
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 
-# json pretty print
-alias pp='python2.6 -mjson.tool'
-
 alias vim="nvim"
 alias v="nvim"
 
@@ -106,3 +100,5 @@ eval "$(direnv hook zsh)"
 epoch() {
   date -d @$1
 }
+export GITLAB_TOKEN=$(pass gitlab_token)
+export PATH="~/.local/bin:$PATH"
