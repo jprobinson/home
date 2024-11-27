@@ -100,5 +100,5 @@ eval "$(direnv hook zsh)"
 epoch() {
   date -d @$1
 }
-export GITLAB_TOKEN=$(pass gitlab_token)
+export GITLAB_TOKEN=$(cat /run/user/$(id -u bits)/secrets/GITLAB_TOKEN)
 export PATH="~/.local/bin:$PATH"
