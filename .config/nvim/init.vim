@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'github/copilot.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sebdah/vim-delve'
 Plug 'prettier/vim-prettier', { 

@@ -102,3 +102,4 @@ epoch() {
 }
 export GITLAB_TOKEN=$(cat /run/user/$(id -u bits)/secrets/GITLAB_TOKEN)
 export PATH="~/.local/bin:$PATH"
+export TMPDIR=/tmp
