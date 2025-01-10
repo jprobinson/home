@@ -14,6 +14,11 @@ sudo apt-get -q -y install tmux htop curl python3-neovim direnv silversearcher-a
 
 pip3 install neovim
 
+# install node.js for copilot
+sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.zshrc
+nvm install 22
+
 # reset the git insteadOf settings for Go
 git config --global url."git@github.com:DataDog".insteadOf "https://github.com/DataDog"
 
