@@ -3,9 +3,9 @@ set -e
 set -x
 
 # install neovim
-curl -fLo /tmp/nvim.tar.gz https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+curl -fLo /tmp/nvim.tar.gz https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 tar -xzf /tmp/nvim.tar.gz
-sudo cp -R /tmp/nvim-linux64 /usr/local/nvim
+sudo cp -R nvim-linux-x86_64 /usr/local/nvim
 sudo ln -s /usr/local/nvim/bin/nvim /usr/bin/nvim
 rm -rf /tmp/nvim*
 
