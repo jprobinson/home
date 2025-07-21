@@ -10,9 +10,7 @@ sudo ln -s /usr/local/nvim/bin/nvim /usr/bin/nvim
 rm -rf /tmp/nvim*
 
 sudo apt-get update && sudo apt-get -q -y upgrade
-sudo apt-get -q -y install tmux htop curl python3-neovim direnv silversearcher-ag
-
-pip3 install neovim
+sudo apt-get -q -y install tmux htop curl direnv silversearcher-ag
 
 # install node.js for copilot
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -23,13 +21,11 @@ nvm install 22
 git config --global url."git@github.com:DataDog".insteadOf "https://github.com/DataDog"
 
 echo "installing vim-plug"
-sh -c "$(curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)"
-
-sudo ln -s /usr/bin/python3 /usr/bin/python
+sh -c 'curl -fLo "${}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 echo "copying dot files"
-cp -R ~/dotfiles/.config/nvim ~/.config/nvim
+cp -R ~/dotfiles/.config/nvim ~/.config/
 
 cp ~/dotfiles/.zshrc ~/.zshrc
 
@@ -45,4 +41,4 @@ go install github.com/google/go-containerregistry/cmd/crane@latest
 
 echo "docker helper"
 
-sudo ddtool docker install-helper
+tool docker install-helper

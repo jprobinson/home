@@ -3,15 +3,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
-Plug 'github/copilot.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sebdah/vim-delve'
 Plug 'prettier/vim-prettier', { 
 	\ 'do': 'yarn install', 
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
-Plug 'Shougo/deoplete.nvim'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-Plug 'rust-lang/rust.vim'
+Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
 call plug#end()
 
 filetype on
@@ -48,9 +45,3 @@ let g:go_info_mode = 'gopls'
 colorscheme ron
 let &colorcolumn=join(range(91,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
-
-" autocompletion settings for Shougo/deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#use_cache = 1
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:python3_host_prog = '/usr/local/python3/bin/python'
