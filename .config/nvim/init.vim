@@ -4,12 +4,15 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'sebdah/vim-delve'
-Plug 'prettier/vim-prettier', { 
-	\ 'do': 'yarn install', 
-	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
+Plug 'prettier/vim-prettier', {
+	\ 'do': 'yarn install',
+	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+
 Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
+
 call plug#end()
+
+imap <C-]> <Cmd>call codeium#CycleOrComplete()<CR>
 
 filetype on
 filetype indent on
