@@ -31,6 +31,7 @@ cp -fR ~/dotfiles/.config/nvim ~/.config/
 cp ~/dotfiles/.zshrc ~/.zshrc
 
 cp -fR ~/dotfiles/.claude ~/
+cp ~/dotfiles/.claude.json ~/
 
 echo "configuring git"
 
