@@ -72,5 +72,7 @@
   "enabledMcpjsonServers": [
     "atlassian",
     "datadog"
-  ]
+  ],
+  "apiKeyHelper": "workspace_secret ANTHROPIC_APIKEY1",
+  "forceLoginMethod": "console"
 }
