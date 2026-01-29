@@ -26,9 +26,11 @@ sh -c "$(curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plu
 sudo ln -s /usr/bin/python3 /usr/bin/python
 
 echo "copying dot files"
-cp -R ~/dotfiles/.config/nvim ~/.config/
+cp -fR ~/dotfiles/.config/nvim ~/.config/
 
 cp ~/dotfiles/.zshrc ~/.zshrc
+
+cp -fR ~/dotfiles/.claude ~/
 
 echo "configuring git"
 
